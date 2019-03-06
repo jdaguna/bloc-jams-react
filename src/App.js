@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 import './App.css';
 import Landing from './components/Landing';
 import Library from './components/Library';
-
+import Album from './components/Album';
 class App extends Component {
   render() {
     return (
@@ -11,22 +11,18 @@ class App extends Component {
        <header>
 	<nav>
 	 <Link to='/'>Landing</Link>
-	 <Link to='/library'>Library</Link>
-	
-	</nav>
-	<h1>chau.z music</h1>
+	 <Link to='/Library'>Library</Link>
+        </nav>
+        <h1>Bloc Jams</h1>
        </header>
        <main>
-	<Route exact path="/" component={Landing} />
-	<Route path="/library" component={Library} />
+        <Route exact path="/" component={Landing} />
+	<Route path="/library" component={Library}/>
+	<Route path="/album/:slug" component={Album}/>
        </main>
       </div>
     );
   }
 }
-
+//testing~~~~!
 export default App;
-<<<<<<< HEAD
-
-=======
->>>>>>> 407464fbcff805ea3c0cf2f9e87ae2346ad4b5fb
